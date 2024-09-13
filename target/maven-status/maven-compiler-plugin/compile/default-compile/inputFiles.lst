@@ -1,0 +1,12 @@
+/Users/andrewbat/QA-java-diplom-3/src/main/java/main/page/MainPage.java
+/Users/andrewbat/QA-java-diplom-3/src/main/java/main/page/SignUpPage.java
+/Users/andrewbat/QA-java-diplom-3/src/main/java/manager/TestValue.java
+/Users/andrewbat/QA-java-diplom-3/src/main/java/manager/BrowserFactory.java
+/Users/andrewbat/QA-java-diplom-3/src/main/java/api/clients/Client.java
+/Users/andrewbat/QA-java-diplom-3/src/main/java/api/models/User.java
+/Users/andrewbat/QA-java-diplom-3/src/main/java/main/page/SignInPage.java
+/Users/andrewbat/QA-java-diplom-3/src/main/java/api/models/Credentials.java
+/Users/andrewbat/QA-java-diplom-3/src/main/java/main/page/ResetPasswordPage.java
+/Users/andrewbat/QA-java-diplom-3/src/main/java/main/page/UserProfilePage.java
+/Users/andrewbat/QA-java-diplom-3/src/main/java/api/clients/UserClient.java
+/Users/andrewbat/QA-java-diplom-3/src/main/java/api/generator/UserGenerator.java

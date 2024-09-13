@@ -1,0 +1,12 @@
+manager/BrowserFactory.class
+manager/TestValue.class
+api/generator/UserGenerator.class
+main/page/ResetPasswordPage.class
+main/page/SignUpPage.class
+api/models/User.class
+main/page/MainPage.class
+api/clients/Client.class
+main/page/UserProfilePage.class
+main/page/SignInPage.class
+api/clients/UserClient.class
+api/models/Credentials.class
