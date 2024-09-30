@@ -1,7 +1,6 @@
 import api.clients.UserClient;
 import api.generator.UserGenerator;
 import api.models.Credentials;
-import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
@@ -15,7 +14,6 @@ import manager.TestValue;
 import main.page.MainPage;
 import org.openqa.selenium.WebDriver;
 
-import static org.junit.Assert.assertEquals;
 
 /**
  * Проверяем:
@@ -75,13 +73,13 @@ public class RegistrationWebTest{
     public void tearDown() {
         userClient = new UserClient();
         Credentials credentials = new Credentials(email, password);
-        Response response = userClient.login(credentials);
+        Response response = UserClient.login(credentials);
         if (response.body().jsonPath().getString("accessToken") != null) {
             userClient.delete(response);
         }
 
         Credentials userInValidCredentials = new Credentials(email, TestValue.PASSWORD_ERROR);
-        Response inValidResponse = userClient.login(userInValidCredentials);
+        Response inValidResponse = UserClient.login(userInValidCredentials);
         if (inValidResponse.body().jsonPath().getString("accessToken") != null) {
             userClient.delete(inValidResponse);
         }

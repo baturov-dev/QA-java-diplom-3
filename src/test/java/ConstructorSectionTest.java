@@ -17,9 +17,7 @@ public class ConstructorSectionTest extends BaseTest {
     public void clickBunsSectionButtonTest() {
         driver.get(MainPage.MAIN_PAGE_URL);
         MainPage mainPage = new MainPage(driver);
-        mainPage.clickSaucesButton()
-                .clickBunsButton();
-        Assert.assertTrue(mainPage.isBunsHeaderIsDisplayed());
+        Assert.assertTrue(mainPage.isSelectedBunsHeaderIsDisplayed());
     }
 
     @Test
@@ -28,7 +26,7 @@ public class ConstructorSectionTest extends BaseTest {
         driver.get(MainPage.MAIN_PAGE_URL);
         MainPage mainPage = new MainPage(driver);
         mainPage.clickSaucesButton();
-        Assert.assertTrue(mainPage.isSaucesHeaderIsDisplayed());
+        Assert.assertTrue(mainPage.isSelectedSaucesHeaderIsDisplayed());
     }
 
     @Test
@@ -37,7 +35,7 @@ public class ConstructorSectionTest extends BaseTest {
         driver.get(MainPage.MAIN_PAGE_URL);
         MainPage mainPage = new MainPage(driver);
         mainPage.clickFillingsButton();
-        Assert.assertTrue(mainPage.isFillingsHeaderIsDisplayed());
+        Assert.assertTrue(mainPage.isSelectedFillingsHeaderIsDisplayed());
     }
 
     @Test

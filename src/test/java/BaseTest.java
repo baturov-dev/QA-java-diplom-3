@@ -33,7 +33,7 @@ public class BaseTest {
     @Step("Закрытие браузера")
     public void cleanUp() {
         Credentials credentials = new Credentials(user.getEmail(), user.getPassword());
-        Response response = userClient.login(credentials);
+        Response response = UserClient.login(credentials);
         if (response.body().jsonPath().getString("accessToken") != null) {
             userClient.delete(response);
         }

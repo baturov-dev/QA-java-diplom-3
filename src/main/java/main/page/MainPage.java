@@ -34,7 +34,7 @@ public class MainPage {
     @FindBy(how = How.XPATH, using = "//div[span[text()='Соусы']]")
     private WebElement sauceButton;
 
-    @FindBy(how = How.XPATH, using = "//*[text()='Начинки']")
+    @FindBy(how = How.XPATH, using = "//span[contains(@class, 'text_type_main-default') and contains(., 'Начинки')]")
     private WebElement fillingsButton;
 
     @FindBy(how = How.XPATH, using = "//h2[text()='Булки']")
@@ -45,6 +45,15 @@ public class MainPage {
 
     @FindBy(how = How.XPATH, using = "//h2[text()='Начинки']")
     private WebElement fillingsHeader;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(., 'Булки')]")
+    private WebElement selectedBunsHeader;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(., 'Соусы')]")
+    private WebElement selectedSauceHeader;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(., 'Начинки')]")
+    private WebElement selectedFillingsHeader;
 
     @FindBy(how = How.CLASS_NAME, using = "tab_tab_type_current__2BEPc")
     private WebElement sectionIngredients;
@@ -121,6 +130,21 @@ public class MainPage {
     @Step("Проверка появления заголовка Начинки")
     public boolean isFillingsHeaderIsDisplayed() {
         return fillingsHeader.isDisplayed();
+    }
+
+    @Step("Проверка появления выбранной вкладки Булки")
+    public boolean isSelectedBunsHeaderIsDisplayed() {
+        return selectedBunsHeader.isDisplayed();
+    }
+
+    @Step("Проверка появления выбранной вкладки Соусы")
+    public boolean isSelectedSaucesHeaderIsDisplayed() {
+        return selectedSauceHeader.isDisplayed();
+    }
+
+    @Step("Проверка появления выбранной вкладки Начинки")
+    public boolean isSelectedFillingsHeaderIsDisplayed() {
+        return selectedFillingsHeader.isDisplayed();
     }
 
     @Step("Скролл до заголовка Булки")
